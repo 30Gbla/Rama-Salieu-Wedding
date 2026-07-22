@@ -393,3 +393,70 @@ body{
     }
 
 }
+/* ==========================
+WELCOME SCREEN
+========================== */
+
+#welcome-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:linear-gradient(135deg,#ffd6ec,#dff3ff);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:99999;
+
+}
+
+.welcome-content{
+
+    padding:40px;
+
+}
+
+.welcome-content h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:80px;
+
+    color:#ff5ea9;
+
+}
+
+.welcome-content h2{
+
+    color:#57b8ff;
+
+    font-size:45px;
+
+}
+
+.welcome-content h3{
+
+    letter-spacing:3px;
+
+}
+
+.welcome-content h4{
+
+    margin:25px 0;
+
+    color:#555;
+
+}
+
+#website{
+
+    display:none;
+
+}
