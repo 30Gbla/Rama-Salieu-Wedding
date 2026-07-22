@@ -324,3 +324,72 @@ body{
     }
 
 }
+/* ==========================
+   Navigation Bar
+========================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-family:'Great Vibes',cursive;
+    font-size:40px;
+    color:#ff5ea9;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#444;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ff5ea9;
+}
+
+/* Prevent navbar from covering sections */
+
+.section{
+    scroll-margin-top:100px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+        margin-top:10px;
+    }
+
+    .logo{
+        font-size:32px;
+    }
+
+}
