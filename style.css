@@ -457,7 +457,7 @@ WELCOME SCREEN
 
 #website{
 
-    display:none;
+    display:block;
 
 }
 /* Calendar & Share Buttons */
