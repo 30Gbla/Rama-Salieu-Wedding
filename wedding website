@@ -1,0 +1,11 @@
+Wedding Website/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+├── images/
+│      engagement.jpg
+│
+└── music/
+       wedding-song.mp3
