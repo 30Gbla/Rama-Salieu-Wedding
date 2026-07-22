@@ -155,3 +155,36 @@ window.onload = function () {
     });
 
 };
+// =========================
+// OPEN INVITATION
+// =========================
+
+const welcome = document.getElementById("welcome-screen");
+
+const website = document.getElementById("website");
+
+const openBtn = document.getElementById("openInvitation");
+
+openBtn.addEventListener("click", () => {
+
+    welcome.style.display = "none";
+
+    website.style.display = "block";
+
+    if (music) {
+
+        music.play();
+
+        musicBtn.innerHTML = "⏸ Pause Music";
+
+    }
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
