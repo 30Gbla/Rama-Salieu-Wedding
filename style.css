@@ -1,0 +1,242 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#fff7fb,#eef7ff);
+    color:#444;
+    text-align:center;
+}
+
+/* Hero Section */
+
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    padding:20px;
+}
+
+.family{
+    letter-spacing:3px;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:82px;
+    color:#ffd6ec;
+}
+
+.hero h2{
+    font-size:50px;
+    color:#8fd3ff;
+    margin:10px 0;
+}
+
+.invite{
+    font-size:22px;
+    margin-top:20px;
+}
+
+.date{
+    margin:25px 0;
+    font-size:30px;
+    color:#fff8b5;
+}
+
+/* Buttons */
+
+.btn{
+    display:inline-block;
+    background:#ff6fb3;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    transition:.3s;
+    font-weight:600;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(255,105,180,.35);
+}
+
+.btn:hover{
+    background:#57b8ff;
+    transform:translateY(-4px);
+}
+
+/* Sections */
+
+.section{
+    padding:80px 20px;
+}
+
+.section h2{
+    font-family:'Great Vibes',cursive;
+    font-size:55px;
+    color:#ff5ea9;
+    margin-bottom:35px;
+}
+
+/* Countdown */
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.countdown div{
+    width:120px;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.countdown span{
+    display:block;
+    font-size:42px;
+    font-weight:bold;
+    color:#57b8ff;
+}
+
+/* Details */
+
+.details p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+/* RSVP */
+
+form{
+    max-width:450px;
+    margin:auto;
+}
+
+input,
+select{
+    width:100%;
+    padding:15px;
+    margin:15px 0;
+    border:2px solid #ffd6ec;
+    border-radius:12px;
+    font-size:16px;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#57b8ff;
+}
+
+/* Footer */
+
+footer{
+    background:#ff6fb3;
+    color:white;
+    padding:60px 20px;
+}
+
+footer h2{
+    font-family:'Great Vibes',cursive;
+    font-size:52px;
+}
+
+footer h3{
+    margin-top:20px;
+    font-size:28px;
+}
+
+/* Floating Animation */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.btn{
+    animation:float 4s ease-in-out infinite;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero{
+    height:85vh;
+}
+
+.hero h1{
+    font-size:58px;
+}
+
+.hero h2{
+    font-size:36px;
+}
+
+.family{
+    font-size:15px;
+}
+
+.invite{
+    font-size:18px;
+}
+
+.date{
+    font-size:22px;
+}
+
+.section h2{
+    font-size:42px;
+}
+
+.countdown div{
+    width:90px;
+    padding:18px;
+}
+
+.countdown span{
+    font-size:30px;
+}
+
+}
