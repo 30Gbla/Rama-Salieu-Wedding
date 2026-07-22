@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramatulia & Salieu Gbla Wedding</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+
+        <!-- Replace with your engagement photo later -->
+        <img src="images/engagement.jpg" alt="Ramatulia and Salieu" class="hero-image">
+
+        <div class="overlay">
+
+            <p class="family">
+                Together With Our Families
+            </p>
+
+            <h1>Ramatulia</h1>
+
+            <h2>&</h2>
+
+            <h1>Salieu Gbla</h1>
+
+            <p class="invite">
+                Joyfully invite you to celebrate our wedding
+            </p>
+
+            <h3 class="date">
+                Wednesday, 12 August 2026
+            </h3>
+
+            <a href="#countdown" class="btn">
+                View Invitation
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- Countdown -->
+    <section id="countdown" class="section">
+
+        <h2>Countdown to Our Big Day</h2>
+
+        <div class="countdown">
+
+            <div>
+                <span id="days">0</span>
+                <p>Days</p>
+            </div>
+
+            <div>
+                <span id="hours">0</span>
+                <p>Hours</p>
+            </div>
+
+            <div>
+                <span id="minutes">0</span>
+                <p>Minutes</p>
+            </div>
+
+            <div>
+                <span id="seconds">0</span>
+                <p>Seconds</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Wedding Details -->
+    <section class="section details">
+
+        <h2>Wedding Details</h2>
+
+        <p><strong>Date:</strong> Wednesday, 12 August 2026</p>
+
+        <p><strong>Time:</strong> 3:00 PM</p>
+
+        <p><strong>Venue:</strong> Old Mill Toronto</p>
+
+        <a class="btn"
+           href="https://maps.google.com/?q=Old+Mill+Toronto"
+           target="_blank">
+            View Map
+        </a>
+
+    </section>
+
+    <!-- RSVP -->
+    <section class="section">
+
+        <h2>RSVP</h2>
+
+        <form id="rsvpForm">
+
+            <input
+                type="text"
+                id="guestName"
+                placeholder="Your Full Name"
+                required>
+
+            <select id="attendance" required>
+
+                <option value="">Will you attend?</option>
+
+                <option>Yes, I will attend ❤️</option>
+
+                <option>Sorry, I can't attend</option>
+
+            </select>
+
+            <button type="submit" class="btn">
+                Submit RSVP
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </section>
+
+    <!-- Music -->
+    <section class="section">
+
+        <h2>Our Song</h2>
+
+        <button id="musicBtn" class="btn">
+            ▶ Play Music
+        </button>
+
+        <audio id="music" loop>
+            <source src="music/wedding-song.mp3" type="audio/mpeg">
+        </audio>
+
+    </section>
+
+  <!-- Our Love Story -->
+
+<section class="section">
+
+    <h2>Our Love Story</h2>
+
+    <p class="story">
+
+        Every love story is beautiful, but ours is our favorite.
+        We thank God for bringing us together and blessing us with
+        a journey filled with love, laughter, faith, and unforgettable
+        memories.
+
+        As we begin this new chapter together, we are excited to
+        celebrate this special day with our family and friends.
+
+        Your love, prayers, and presence mean the world to us.
+
+    </p>
+
+</section>
+
+<!-- Wedding Gallery -->
+
+<section class="section">
+
+    <h2>Gallery</h2>
+
+    <div class="gallery">
+
+        <img src="images/photo1.jpg" alt="Photo 1">
+
+        <img src="images/photo2.jpg" alt="Photo 2">
+
+        <img src="images/photo3.jpg" alt="Photo 3">
+
+        <img src="images/photo4.jpg" alt="Photo 4">
+
+    </div>
+
+</section>
+
+<!-- Venue Map -->
+
+<section class="section">
+
+    <h2>Wedding Venue</h2>
+
+    <p>Old Mill Toronto</p>
+
+    <iframe
+        src="https://www.google.com/maps?q=Old+Mill+Toronto&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;border-radius:20px;"
+        loading="lazy">
+    </iframe>
+
+</section>
+    <!-- Footer -->
+    <footer>
+
+        <h2>We Can't Wait To Celebrate With You!</h2>
+
+        <p>
+            With Love ❤️
+        </p>
+
+        <h3>
+            Ramatulia & Salieu Gbla
+        </h3>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
