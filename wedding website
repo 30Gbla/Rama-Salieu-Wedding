@@ -1,17 +1,17 @@
-Wedding Website/
+Rama-Salieu-Wedding/
 │
 ├── index.html
 ├── style.css
 ├── script.js
 │
 ├── images/
-│   ├── engagement.jpg
-│   ├── photo1.jpg
-│   ├── photo2.jpg
-│   ├── photo3.jpg
-│   └── photo4.jpg
+│     engagement.jpg
+│     photo1.jpg
+│     photo2.jpg
+│     photo3.jpg
+│     photo4.jpg
 │
-├── music/
-│   └── wedding-song.mp3
-│
-└── favicon.ico   (optional)
+└── music/
+      wedding-song.mp3
+
+
