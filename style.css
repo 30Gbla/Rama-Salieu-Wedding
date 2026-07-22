@@ -306,3 +306,328 @@ nav ul a:hover{
     }
 
 }
+/* ==========================================
+   SECTIONS
+========================================== */
+
+.section{
+
+    padding:100px 8%;
+    text-align:center;
+
+}
+
+.section h2{
+
+    font-family:'Great Vibes',cursive;
+    font-size:60px;
+    color:#ff5ca8;
+    margin-bottom:40px;
+
+}
+
+/* ==========================================
+   COUNTDOWN
+========================================== */
+
+.countdown{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+
+}
+
+.countdown div{
+
+    width:140px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.countdown span{
+
+    display:block;
+    font-size:45px;
+    font-weight:bold;
+    color:#66c8ff;
+
+}
+
+/* ==========================================
+   LOVE STORY
+========================================== */
+
+.story{
+
+    max-width:850px;
+    margin:auto;
+    line-height:2;
+    font-size:20px;
+    color:#666;
+
+}
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.gallery img{
+
+    width:100%;
+    height:300px;
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================
+   MAP
+========================================== */
+
+iframe{
+
+    width:100%;
+    height:450px;
+
+    border:none;
+
+    border-radius:20px;
+
+    margin:30px 0;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   RSVP
+========================================== */
+
+form{
+
+    max-width:500px;
+    margin:auto;
+
+}
+
+input,
+select{
+
+    width:100%;
+    padding:18px;
+
+    margin:15px 0;
+
+    border:2px solid #ffd4ea;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:#66c8ff;
+
+}
+
+#message{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    color:#ff5ca8;
+
+}
+
+/* ==========================================
+   MUSIC BUTTON
+========================================== */
+
+.music-button{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff5ca8;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+    z-index:999;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    background:#ff5ca8;
+
+    color:white;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+}
+
+footer h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+}
+
+footer h3{
+
+    margin-top:20px;
+
+    font-size:28px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+nav{
+
+    flex-direction:column;
+
+    padding:15px;
+
+}
+
+nav ul{
+
+    margin-top:15px;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.logo{
+
+    font-size:34px;
+
+}
+
+.overlay h1{
+
+    font-size:58px;
+
+}
+
+.overlay h2{
+
+    font-size:34px;
+
+}
+
+.overlay h3{
+
+    font-size:22px;
+
+}
+
+.section h2{
+
+    font-size:45px;
+
+}
+
+.countdown div{
+
+    width:100px;
+
+    padding:20px;
+
+}
+
+.countdown span{
+
+    font-size:30px;
+
+}
+
+.story{
+
+    font-size:17px;
+
+}
+
+.gallery img{
+
+    height:220px;
+
+}
+
+.music-button{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:22px;
+
+}
+
+}
