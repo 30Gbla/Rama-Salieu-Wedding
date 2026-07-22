@@ -460,3 +460,19 @@ WELCOME SCREEN
     display:none;
 
 }
+/* Calendar & Share Buttons */
+
+.event-buttons,
+.share-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
