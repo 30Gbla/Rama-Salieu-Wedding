@@ -128,3 +128,30 @@ sections.forEach(section => {
     observer.observe(section);
 
 });
+// ===================================
+// Falling Flower Petals
+// ===================================
+
+window.onload = function () {
+
+    new Sakura('body', {
+        className: 'sakura',
+        fallSpeed: 2,
+        maxSize: 18,
+        minSize: 10,
+        delay: 300,
+        colors: [
+            {
+                gradientColorStart: 'rgba(255,183,197,0.9)',
+                gradientColorEnd: 'rgba(255,105,180,0.9)',
+                gradientColorDegree: 120
+            },
+            {
+                gradientColorStart: 'rgba(173,216,230,0.9)',
+                gradientColorEnd: 'rgba(135,206,250,0.9)',
+                gradientColorDegree: 120
+            }
+        ]
+    });
+
+};
