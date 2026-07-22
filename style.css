@@ -299,3 +299,28 @@ iframe{
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 
 }
+/* =====================================
+   Background
+===================================== */
+
+body{
+    overflow-x:hidden;
+}
+
+/* Floating Animation */
+
+.hero-image{
+    animation:zoomHero 18s ease-in-out infinite alternate;
+}
+
+@keyframes zoomHero{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08);
+    }
+
+}
