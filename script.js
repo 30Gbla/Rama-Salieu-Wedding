@@ -1,189 +1,160 @@
-// ===============================
-// Wedding Countdown
-// ===============================
+// ==========================
+// Wait for page to load
+// ==========================
 
-const weddingDate = new Date("August 12, 2026 15:00:00").getTime();
+document.addEventListener("DOMContentLoaded", function () {
 
-const countdown = setInterval(function () {
+    // ==========================
+    // Welcome Screen
+    // ==========================
 
-    const now = new Date().getTime();
+    const welcomeScreen = document.getElementById("welcome-screen");
+    const website = document.getElementById("website");
+    const enterButton = document.getElementById("enterSite");
 
-    const distance = weddingDate - now;
+    // Hide website until invitation is opened
+    website.style.display = "none";
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    enterButton.addEventListener("click", function () {
 
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        welcomeScreen.style.display = "none";
 
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        website.style.display = "block";
 
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Start music after user interaction
+        if (music) {
+            music.play().catch(() => {});
+            musicButton.textContent = "⏸";
+        }
 
-    document.getElementById("days").innerHTML = days;
+    });
 
-    document.getElementById("hours").innerHTML = hours;
+    // ==========================
+    // Countdown Timer
+    // ==========================
 
-    document.getElementById("minutes").innerHTML = minutes;
+    const weddingDate = new Date("August 12, 2026 15:00:00").getTime();
 
-    document.getElementById("seconds").innerHTML = seconds;
+    function updateCountdown() {
 
-    if (distance < 0) {
+        const now = new Date().getTime();
 
-        clearInterval(countdown);
+        const distance = weddingDate - now;
 
-        document.querySelector(".countdown").innerHTML =
-            "<h2>💍 Today is Our Wedding Day! 💕</h2>";
+        if (distance <= 0) {
 
-    }
+            document.querySelector(".countdown").innerHTML =
+                "<h2>💍 Today Is Our Wedding Day! ❤️</h2>";
 
-}, 1000);
+            return;
 
-// ===============================
-// RSVP Form
-// ===============================
+        }
 
-const form = document.getElementById("rsvpForm");
+        document.getElementById("days").textContent =
+            Math.floor(distance / (1000 * 60 * 60 * 24));
 
-const message = document.getElementById("message");
+        document.getElementById("hours").textContent =
+            Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-form.addEventListener("submit", function (e) {
+        document.getElementById("minutes").textContent =
+            Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-    e.preventDefault();
-
-    const guest = document.getElementById("guestName").value;
-
-    const attendance = document.getElementById("attendance").value;
-
-    if (attendance.includes("Yes")) {
-
-        message.innerHTML =
-            `❤️ Thank you, <strong>${guest}</strong>! We can't wait to celebrate with you!`;
-
-    } else {
-
-        message.innerHTML =
-            `💐 Thank you, <strong>${guest}</strong>. We'll miss you and appreciate your wishes.`;
-
-    }
-
-    form.reset();
-
-});
-
-// ===============================
-// Background Music
-// ===============================
-
-const music = document.getElementById("music");
-
-const musicBtn = document.getElementById("musicBtn");
-
-musicBtn.addEventListener("click", function () {
-
-    if (music.paused) {
-
-        music.play();
-
-        musicBtn.innerHTML = "⏸ Pause Music";
-
-    } else {
-
-        music.pause();
-
-        musicBtn.innerHTML = "▶ Play Music";
+        document.getElementById("seconds").textContent =
+            Math.floor((distance % (1000 * 60)) / 1000);
 
     }
 
-});
+    updateCountdown();
 
-// ===============================
-// Fade-in Animation
-// ===============================
+    setInterval(updateCountdown, 1000);
 
-const sections = document.querySelectorAll(".section");
+    // ==========================
+    // RSVP
+    // ==========================
 
-const observer = new IntersectionObserver((entries) => {
+    const form = document.getElementById("rsvpForm");
 
-    entries.forEach(entry => {
+    const message = document.getElementById("message");
 
-        if (entry.isIntersecting) {
+    form.addEventListener("submit", function (e) {
 
-            entry.target.style.opacity = "1";
+        e.preventDefault();
 
-            entry.target.style.transform = "translateY(0)";
+        const guest = document.getElementById("guestName").value;
+
+        const attendance = document.getElementById("attendance").value;
+
+        if (attendance.includes("Yes")) {
+
+            message.innerHTML =
+                `❤️ Thank you <strong>${guest}</strong>! We can't wait to celebrate with you.`;
+
+        } else {
+
+            message.innerHTML =
+                `💐 Thank you <strong>${guest}</strong>. We'll miss you and appreciate your kind wishes.`;
+
+        }
+
+        form.reset();
+
+    });
+
+    // ==========================
+    // Music
+    // ==========================
+
+    const music = document.getElementById("music");
+
+    const musicButton = document.getElementById("musicBtn");
+
+    musicButton.addEventListener("click", function () {
+
+        if (music.paused) {
+
+            music.play();
+
+            musicButton.textContent = "⏸";
+
+        } else {
+
+            music.pause();
+
+            musicButton.textContent = "🎵";
 
         }
 
     });
 
-});
+    // ==========================
+    // Fade In Sections
+    // ==========================
 
-sections.forEach(section => {
+    const observer = new IntersectionObserver(function (entries) {
 
-    section.style.opacity = "0";
+        entries.forEach(function (entry) {
 
-    section.style.transform = "translateY(50px)";
+            if (entry.isIntersecting) {
 
-    section.style.transition = "all 1s ease";
+                entry.target.style.opacity = "1";
 
-    observer.observe(section);
+                entry.target.style.transform = "translateY(0)";
 
-});
-// ===================================
-// Falling Flower Petals
-// ===================================
-
-window.onload = function () {
-
-    new Sakura('body', {
-        className: 'sakura',
-        fallSpeed: 2,
-        maxSize: 18,
-        minSize: 10,
-        delay: 300,
-        colors: [
-            {
-                gradientColorStart: 'rgba(255,183,197,0.9)',
-                gradientColorEnd: 'rgba(255,105,180,0.9)',
-                gradientColorDegree: 120
-            },
-            {
-                gradientColorStart: 'rgba(173,216,230,0.9)',
-                gradientColorEnd: 'rgba(135,206,250,0.9)',
-                gradientColorDegree: 120
             }
-        ]
+
+        });
+
     });
 
-};
-// =========================
-// OPEN INVITATION
-// =========================
+    document.querySelectorAll(".section").forEach(function (section) {
 
-const welcome = document.getElementById("welcome-screen");
+        section.style.opacity = "0";
 
-const website = document.getElementById("website");
+        section.style.transform = "translateY(40px)";
 
-const openBtn = document.getElementById("openInvitation");
+        section.style.transition = "1s";
 
-openBtn.addEventListener("click", () => {
-
-    welcome.style.display = "none";
-
-    website.style.display = "block";
-
-    if (music) {
-
-        music.play();
-
-        musicBtn.innerHTML = "⏸ Pause Music";
-
-    }
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
+        observer.observe(section);
 
     });
 
