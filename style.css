@@ -670,3 +670,26 @@ box-shadow:0 0 40px rgba(255,255,255,.4);
 cursor:pointer;
 
 }
+/* Videos */
+
+.video-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.video-grid video{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
